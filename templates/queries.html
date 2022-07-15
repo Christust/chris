@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Queries</h1>
+    <h3>Todos los autores</h3>
+    <ul>
+        {% for author in limited %}
+        <li>{{author.email}}</li>
+        {% endfor %}
+    </ul>
+    <h3>Total de autores {{ authors|length }}</h3>
+    <h3>Autores filtrados por email:</h3>
+    <ul>
+        {% for el in filtered %}
+        <li>{{ el.name }} | {{ el.email }}</li>
+        {% endfor %}
+    </ul>
+    <h3>Author unico por ID: {{ author }} {{ author.email }}</h3>
+</body>
+</html>
